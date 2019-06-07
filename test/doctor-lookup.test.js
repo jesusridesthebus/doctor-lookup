@@ -1,4 +1,4 @@
-import { add } from '../src/functions';
+import { add } from '../src/doctor-lookup.js';
 
 test('adds 1 + 2 to equal 3', () => {
     expect(add(1, 2)).toBe(3);    
