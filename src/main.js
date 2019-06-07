@@ -18,7 +18,7 @@ $(document).ready(function() {
     promise.then((response) => {
       let body = JSON.parse(response);
       for(let i = 0; i < body.data.length; i++) {
-        $("#show-doctors").append(body.data[i].profile.first_name + ' ' + body.data[i].profile.last_name + ' ' + body.data[i].profile.title + ' ' + 'Accepts New Patients?: ' + body.data[i].practices[0].accepts_new_patients + ' ' + body.data[i].practices[0].phones[0].number + ' ' + body.data[i].practices[0].visit_address.street + ' ' + '<br>');
+        $("#show-doctors").append(body.data[i].profile.first_name + ' ' + body.data[i].profile.last_name + ', ' + body.data[i].profile.title + '. ' + 'Accepts New Patients?: ' + body.data[i].practices[0].accepts_new_patients + '. ' + body.data[i].practices[0].phones[0].number + '. ' + body.data[i].practices[0].visit_address.street + '. ' + '<br>');
       }
     });
   });
@@ -35,7 +35,7 @@ $(document).ready(function() {
     promise.then((response) => {
       let body = JSON.parse(response);
       for(let i = 0; i < body.data.length; i++) {
-        $("#show-doctors").append(body.data[i].profile.first_name + ' ' + body.data[i].profile.last_name + ' ' + body.data[i].profile.title + ' ' + 'Accepts New Patients?: ' + body.data[i].practices[0].accepts_new_patients + ' ' + body.data[i].practices[0].phones[0].number + ' ' + body.data[i].practices[0].visit_address.street + ' ' + '<br>');
+        $("#show-doctors").append(body.data[i].profile.first_name + ' ' + body.data[i].profile.last_name + ', ' + body.data[i].profile.title + '. ' + 'Accepts New Patients?: ' + body.data[i].practices[0].accepts_new_patients + '. ' + body.data[i].practices[0].phones[0].number + '. ' + body.data[i].practices[0].visit_address.street + '. ' + '<br>');
       }
     });
   });
