@@ -13,18 +13,24 @@
     <div class="find-doctor">
       <form class="search" id="search-doctor">
         <label for="doctor-name">Search by Doctor Name</label>
-        <input id="input-doctor-name" type="text" name="doctor-name">
-        <button id="doctor-name" type="submit" name="button">Search</button>
+        <input class="input name" id="input-doctor-name" type="text" name="doctor-name">
+        <button id="name" type="submit" name="button">Search</button>
       </form>
       <form class="search" id="search-symptoms">
         <label for="symptoms">Search by Symptoms</label>
-        <input type="text" name="symptoms">
-        <button id="symptoms" type="submit" name="button">Search</button>
+        <input class="input query" type="text" name="symptoms">
+        <button id="query" type="submit" name="button">Search</button>
       </form>
     </div>
 
+    <div class="doctors">
+      <p>Doctors that match your search:
+        <br>
+        <span id="show-doctors"></span>
+      </p>
+    </div>
     <div class="errors">
-        <p>error: <span id="showErrors"></span></p>
+      <p>error: <span id="showErrors"></span></p>
     </div>
 
   </div>
