@@ -6,15 +6,22 @@ import $ from 'jquery';
 // import './css/styles.css';
 
 $(document).ready(function() {
-  $("#find-doctor").click(() => {
+  $("#doctor-name").click(() => {
     event.preventDefault();
+    let doctor = $("#input-doctor-name").val();
     let doctorLookup = new Doctor();
-    let promise = doctorLookup.getDoctor();
+    let promise = doctorLookup.getDoctor(doctor);
+
 
     promise.then((response) => {
       let body = JSON.parse(response);
-      let doctor = body.doctor;
-      $('.find-doctor').text;
+      for(i = 0; i < body.data.length; i++) {
+        console.log(body.data[i].profile.first_name + ' ' + body.data[i].profile.last_name);
+
+      }
+      console.log(body.data);
+      // let doctor = body.doctor;
+      // $('.find-doctor').text;
     });
   });
 });
