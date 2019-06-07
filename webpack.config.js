@@ -16,8 +16,9 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new Dotenv(),
         new HtmlWebpackPlugin({
-            title: 'Template',
+            title: 'doctorlookup',
             template: './src/index.html',
             inject: 'body'
         }),
